@@ -1,0 +1,10 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "title": "My first post",
+      "content": "This is my first post with Quasar and Vue",
+      "done": false
+    }
+  ]
+}
