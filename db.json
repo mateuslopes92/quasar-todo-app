@@ -2,8 +2,8 @@
   "items": [
     {
       "id": "1",
-      "title": "My first post",
-      "content": "This is my first post with Quasar and Vue",
+      "title": "My first item",
+      "content": "This is my first item with Quasar and Vue",
       "done": false
     }
   ]
