@@ -5,6 +5,18 @@
       "title": "My first item",
       "content": "This is my first item with Quasar and Vue",
       "done": false
+    },
+    {
+      "id": "565c",
+      "title": "My second item",
+      "content": "fasfasf",
+      "done": false
+    },
+    {
+      "id": "b28b",
+      "title": "asfasfasfasfasf",
+      "content": "asfasfasfas",
+      "done": false
     }
   ]
 }

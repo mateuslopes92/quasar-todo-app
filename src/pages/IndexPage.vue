@@ -12,7 +12,13 @@
         <q-btn color="primary" label="Add Item" :to="{ name: 'formItem' }" />
       </template>
       <template v-slot:body-cell-actions="props">
-        <q-td :props="props">
+        <q-td :props="props" class="q-gutter-sm">
+          <q-btn
+            icon="edit"
+            color="info"
+            dense size="sm"
+            @click="handleEditItem(props.row.id)"
+          />
           <q-btn
             icon="delete"
             color="negative"
@@ -29,6 +35,7 @@
 import { defineComponent, ref, onMounted } from 'vue';
 import itemsService from 'src/services/itemsService';
 import { useQuasar } from 'quasar';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
   name: 'IndexPage',
@@ -36,6 +43,7 @@ export default defineComponent({
     const items = ref([]);
     const { list, remove } = itemsService();
     const $q = useQuasar();
+    const router = useRouter();
 
     const columns = [
       {
@@ -88,6 +96,10 @@ export default defineComponent({
       }
     };
 
+    const handleEditItem = (id) => {
+      router.push({ name: 'formItem', params: { id } });
+    };
+
     onMounted(() => {
       getItems();
     });
@@ -96,6 +108,7 @@ export default defineComponent({
       items,
       columns,
       handleDeleteItem,
+      handleEditItem,
     };
   },
 });
